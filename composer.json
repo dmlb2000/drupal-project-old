@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "dmlb2000/drupal-core-ui": "^1.0",
+        "dmlb2000/drupal-core-ui": "^1.1",
 	"cweagans/composer-patches": "^1.6.0",
 	"drupal-composer/drupal-scaffold": "^2.0.0"
     },
@@ -66,10 +66,10 @@
 	    "post-install-cmd": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
 	    "post-update-cmd": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
 	    "post-create-project-cmd": "rm -r -f .travis.yml behat.yml .travis-ci",
-	    "nuke": "rm -r -f docroot/modules/contrib docroot/profiles/contrib/lightning vendor composer.lock",
+	    "nuke": "rm -r -f docroot/modules/contrib docroot/profiles/contrib/dmlb2000 vendor composer.lock",
 	    "quick-start": [
 		    "composer install",
-		    "php docroot/core/scripts/drupal quick-start lightning --no-interaction"
+		    "php docroot/core/scripts/drupal quick-start dmlb2000 --no-interaction"
 	    ]
     }
 }
