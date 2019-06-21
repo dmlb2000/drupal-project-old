@@ -8,8 +8,7 @@
     "email": "dmlb2000@gmail.com"
   }],
   "require": {
-    "dmlb2000/drupal-profile": "^2.1",
-    "acquia/lightning": "dev-fix-3062585-update-lightning-api",
+    "dmlb2000/drupal-profile": "^3.0",
     "cweagans/composer-patches": "^1.6.0",
     "drupal-composer/drupal-scaffold": "^2.0.0"
   },
