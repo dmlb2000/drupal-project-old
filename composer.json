@@ -39,11 +39,6 @@
     "assets": {
       "type": "composer",
       "url": "https://asset-packagist.org"
-    },
-    "dmlb2000_lightning": {
-      "type": "vcs",
-      "url": "https://github.com/dmlb2000/lightning.git",
-      "no-api": true
     }
   },
   "minimum-stability": "dev",
