@@ -19,7 +19,8 @@
     "drupal/admin_toolbar": "^1.27",
     "drupal/devel_generate": "^2.1",
     "drupal/ubercart": "^4.0@alpha",
-    "drupal/easy_install": "^10.1"
+    "drupal/easy_install": "^10.1",
+    "drupal/tablefield": "^2.0@alpha"
   },
   "require-dev": {
     "drush/drush": "^9.0"
