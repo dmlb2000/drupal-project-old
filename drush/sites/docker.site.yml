@@ -1,0 +1,10 @@
+---
+local:
+  host: localhost
+  user: drupal
+  root: /var/www/drupal/site/
+  uri: http://localhost:8080
+  ssh:
+    options: -p 2222 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null
+  paths:
+    drush-script: ./site/vendor/bin/drush
