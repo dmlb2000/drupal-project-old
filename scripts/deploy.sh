@@ -9,5 +9,6 @@ docker-compose pull
 docker-compose up -d
 popd
 composer install
+composer update
 drush -y rsync . @docker.local
 drush -y @docker.local si --db-url=mysql://drupal:drupal@drupaldb:3306/drupal --site-name="$PROFILE site" $PROFILE
