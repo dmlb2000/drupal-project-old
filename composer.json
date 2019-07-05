@@ -10,7 +10,10 @@
   "require": {
     "dmlb2000/dmlb2000-profiles": "^4.0",
     "cweagans/composer-patches": "^1.6.0",
-    "drupal-composer/drupal-scaffold": "^2.0.0"
+    "drupal-composer/drupal-scaffold": "^2.0.0",
+    "drupal/filebrowser": "^2.0",
+    "drupal/workflow": "^1.1",
+    "drupal/json_field": "^1.0@RC"
   },
   "require-dev": {
     "drush/drush": "^9.0",
@@ -49,7 +52,10 @@
   "scripts": {
     "post-install-cmd": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
     "post-update-cmd": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-    "post-create-project-cmd": "rm -r -f .travis.yml behat.yml .travis-ci",
+    "post-create-project-cmd": [
+      "rm -r -f .travis.yml behat.yml .travis-ci",
+      "cp ${HOME}/.ssh/id_rsa.pub scripts/local-docker/authorized_keys"
+    ],
     "nuke": "rm -r -f docroot/modules/contrib docroot/profiles/contrib/dmlb2000 vendor composer.lock",
     "quick-start": [
       "composer install",

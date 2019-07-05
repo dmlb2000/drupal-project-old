@@ -22,3 +22,6 @@
 
 # Ignore .env files as they are personal
 /.env
+
+# Ignore docker-compose ssh authorized_keys
+/scripts/local-docker/authorized_keys
