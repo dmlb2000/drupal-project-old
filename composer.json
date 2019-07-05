@@ -1,5 +1,5 @@
 {
-  "name": "dmlb2000/drupal-project",
+  "name": "dmlb2000/dmlb2000-project",
   "description": "Project template for Drupal 8 by dmlb2000",
   "type": "project",
   "license": "LGPL-3.0-or-later",
@@ -8,7 +8,7 @@
     "email": "dmlb2000@gmail.com"
   }],
   "require": {
-    "dmlb2000/drupal-profile": "^3.0",
+    "dmlb2000/dmlb2000-profiles": "^4.0",
     "cweagans/composer-patches": "^1.6.0",
     "drupal-composer/drupal-scaffold": "^2.0.0"
   },

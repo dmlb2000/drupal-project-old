@@ -1,0 +1,22 @@
+version: "3"
+services:
+  drupaldb:
+    image: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: drupal
+      MYSQL_USER: drupal
+      MYSQL_PASSWORD: drupal
+      MYSQL_DATABASE: drupal
+
+  drupal:
+    build:
+      context: .
+    privileged: true
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    links:
+      - drupaldb
+    ports:
+      - "8080:80"
+      - "2222:22"
+    command: /lib/systemd/systemd
