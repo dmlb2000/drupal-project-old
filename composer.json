@@ -8,9 +8,10 @@
     "email": "dmlb2000@gmail.com"
   }],
   "require": {
-    "dmlb2000/dmlb2000-profiles": "^4.0",
     "cweagans/composer-patches": "^1.6.0",
-    "drupal-composer/drupal-scaffold": "^2.0.0",
+    "drupal-composer/drupal-scaffold": "^2.5",
+    "drupal/console": "^1.0.2",
+    "drupal/core": "^8.7.0",
     "drupal/filebrowser": "^2.0",
     "drupal/workflow": "^1.1",
     "drupal/json_field": "^1.0@RC",
@@ -21,7 +22,8 @@
     "drupal/ubercart": "^4.0@alpha",
     "drupal/easy_install": "^10.1",
     "drupal/tablefield": "^2.0@alpha",
-    "pacifica/pacifica": "dev-8.x-1.x"
+    "pacifica/pacifica": "dev-8.x-1.x",
+    "drupal/php": "^1.0"
   },
   "require-dev": {
     "drush/drush": "^9.0"
