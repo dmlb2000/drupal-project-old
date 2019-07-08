@@ -6,9 +6,10 @@ if [[ ! -d scripts/pacifica/.git ]] ; then
 fi
 pushd scripts/pacifica
 git checkout ${PACIFICA_VERSION}
-docker-compose pull
-docker-compose build --pull
-docker-compose up -d
+DOCKER_COMPOSE_CMD="docker-compose -f docker-compose.yml -f ../pacifica-docker-compose.override.yml"
+$DOCKER_COMPOSE_CMD pull
+$DOCKER_COMPOSE_CMD build --pull
+$DOCKER_COMPOSE_CMD up -d
 MAX_TRIES=60
 HTTP_CODE=$(curl -sL -w "%{http_code}\\n" localhost:8121/keys -o /dev/null || true)
 while [[ $HTTP_CODE != 200 && $MAX_TRIES > 0 ]] ; do

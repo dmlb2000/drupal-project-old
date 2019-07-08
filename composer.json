@@ -22,7 +22,7 @@
     "drupal/ubercart": "^4.0@alpha",
     "drupal/easy_install": "^10.1",
     "drupal/tablefield": "^2.0@alpha",
-    "pacifica/pacifica": "dev-8.x-1.x",
+    "pacifica/pacifica": "dev-add-uploader",
     "drupal/php": "^1.0"
   },
   "require-dev": {
@@ -52,6 +52,11 @@
     "assets": {
       "type": "composer",
       "url": "https://asset-packagist.org"
+    },
+    "pacifica-dev": {
+      "type": "vcs",
+      "url": "https://github.com/dmlb2000/pacifica-drupal-module.git",
+      "no-api": true
     }
   },
   "minimum-stability": "dev",
