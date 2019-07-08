@@ -6,6 +6,7 @@ run export DEBIAN_FRONTEND="noninteractive" ; \
     apt-get install -y systemd-container rsyslog openssh-server openssh-client vim \
     zlib1g-dev memcached rsync libmemcached-dev git mariadb-client; \
     rm -rf /var/lib/apt/lists/*
+copy uploads.ini /usr/local/etc/php/conf.d/uploads.ini
 arg PHP_MEMCACHED_VER=3.1.3
 run mkdir -p /usr/src/php/ext
 run curl -L https://github.com/php-memcached-dev/php-memcached/archive/v${PHP_MEMCACHED_VER}.tar.gz | tar -C /usr/src/php/ext -xzf -; mv /usr/src/php/ext/php-memcached-${PHP_MEMCACHED_VER} /usr/src/php/ext/memcached
