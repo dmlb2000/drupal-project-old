@@ -11,3 +11,6 @@
 
 # Ignore docker-compose ssh authorized_keys
 /scripts/local-docker/authorized_keys
+
+# Ignore the Pacifica release repository
+/scripts/pacifica

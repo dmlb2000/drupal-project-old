@@ -3,7 +3,7 @@ local:
   host: localhost
   user: drupal
   root: /var/www/drupal/site/
-  uri: http://localhost:8080
+  uri: http://localhost:9080
   ssh:
     options: -p 2222 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null
   paths:

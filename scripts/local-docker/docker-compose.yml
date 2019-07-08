@@ -1,4 +1,7 @@
 version: "3"
+networks:
+  default:
+    external: pacifica_default
 services:
   drupaldb:
     image: mariadb
@@ -17,6 +20,6 @@ services:
     links:
       - drupaldb
     ports:
-      - "8080:80"
+      - "9080:80"
       - "2222:22"
     command: /lib/systemd/systemd
