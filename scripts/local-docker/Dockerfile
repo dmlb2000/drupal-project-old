@@ -10,6 +10,7 @@ copy uploads.ini /usr/local/etc/php/conf.d/uploads.ini
 arg PHP_MEMCACHED_VER=3.1.3
 run mkdir -p /usr/src/php/ext
 run curl -L https://github.com/php-memcached-dev/php-memcached/archive/v${PHP_MEMCACHED_VER}.tar.gz | tar -C /usr/src/php/ext -xzf -; mv /usr/src/php/ext/php-memcached-${PHP_MEMCACHED_VER} /usr/src/php/ext/memcached
+run docker-php-ext-install bcmath sockets
 run docker-php-ext-configure memcached --with-zlib-dir=/usr; \
     docker-php-ext-install memcached
 run rm -f /lib/systemd/system/multi-user.target.wants/* \

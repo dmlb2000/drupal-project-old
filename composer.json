@@ -23,7 +23,8 @@
     "drupal/easy_install": "^10.1",
     "drupal/tablefield": "^2.0@alpha",
     "pacifica/pacifica": "dev-add-uploader",
-    "drupal/php": "^1.0"
+    "drupal/php": "^1.0",
+    "drupal/config_inspector": "^1.0@beta"
   },
   "require-dev": {
     "drush/drush": "^9.0"
