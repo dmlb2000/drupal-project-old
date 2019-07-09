@@ -4,6 +4,15 @@ networks:
     external:
       name: pacifica_default
 services:
+  drupalamqp:
+    image: rabbitmq:3.7
+  notifyrouter:
+    build:
+      context: docker/notify-router
+    links:
+      - drupalamqp
+    environment:
+      HOST: drupalamqp
   drupaldb:
     image: mariadb
     environment:
@@ -11,7 +20,6 @@ services:
       MYSQL_USER: drupal
       MYSQL_PASSWORD: drupal
       MYSQL_DATABASE: drupal
-
   drupal:
     build:
       context: .
