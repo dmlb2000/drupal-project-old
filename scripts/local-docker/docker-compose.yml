@@ -1,7 +1,8 @@
 version: "3"
 networks:
   default:
-    external: pacifica_default
+    external:
+      name: pacifica_default
 services:
   drupaldb:
     image: mariadb
