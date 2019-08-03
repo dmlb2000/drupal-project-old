@@ -24,7 +24,9 @@
     "drupal/tablefield": "^2.0@alpha",
     "pacifica/pacifica": "dev-add-uploader",
     "drupal/php": "^1.0",
-    "drupal/config_inspector": "^1.0@beta"
+    "drupal/config_inspector": "^1.0@beta",
+    "drupal/migrate_plus": "^4.2",
+    "drupal/migrate_tools": "^4.1"
   },
   "require-dev": {
     "drush/drush": "^9.0"
