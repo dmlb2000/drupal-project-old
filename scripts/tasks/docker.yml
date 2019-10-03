@@ -1,0 +1,35 @@
+---
+- name: Build Docker Image
+  docker_image:
+    name: drupal_server
+    build:
+      path: local-docker
+    source: build
+  when: destroy != true
+- name: Create Drupal Mariadb
+  docker_container:
+    name: drupaldb
+    image: mariadb:latest
+    env:
+      MYSQL_ROOT_PASSWORD: drupal
+      MYSQL_USER: drupal
+      MYSQL_PASSWORD: drupal
+      MYSQL_DATABASE: drupal
+- name: Create Drupal Server
+  docker_container:
+    name: drupal
+    image: drupal_server
+    privileged: true
+    published_ports:
+      - "9080:80"
+      - "2222:22"
+    links:
+      - drupaldb
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    command: /lib/systemd/systemd
+- name: add container to inventory
+  add_host:
+    name: drupal
+    ansible_connection: docker
+  changed_when: false

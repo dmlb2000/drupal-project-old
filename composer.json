@@ -75,6 +75,8 @@
     "quick-start": [
       "composer install",
       "php docroot/core/scripts/drupal quick-start dmlb2000 --no-interaction"
-    ]
+    ],
+    "local-docker-deploy": "ansible-playbook -i scripts/inventory.yml -e destroy=false scripts/playbook.yml",
+    "local-docker-destroy": "ansible-playbook -i scripts/inventory.yml -e destroy=true scripts/playbook.yml"
   }
 }

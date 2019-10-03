@@ -1,0 +1,8 @@
+---
+- name: Deploy Local Docker
+  hosts: localhost
+  tasks:
+    - name: Include Docker Tasks
+      include: tasks/docker.yml
+    - name: Include Pacifica Tasks
+      include: tasks/pacifica.yml

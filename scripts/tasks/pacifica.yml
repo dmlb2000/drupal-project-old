@@ -1,0 +1,10 @@
+---
+- name: Clone Pacifica
+  git:
+    repo: 'https://github.com/pacifica/pacifica.git'
+    dest: scripts/pacifica
+- name: Docker Compose Pull
+  docker_compose:
+    build: true
+    pull: true
+    project_src: scripts/pacifica
